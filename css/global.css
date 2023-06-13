@@ -1,0 +1,498 @@
+/* Fonts */
+
+@font-face {
+    font-family: "crimsonReg";
+    src: url(../fonts/CrimsonText-Regular-p.ttf);
+  }
+  
+  @font-face {
+    font-family: "crimsonBold";
+    src: url(../fonts/CrimsonText-Bold-footer.ttf);
+  }
+  
+  @font-face {
+    font-family: "cormorantGaramondLight";
+    src: url(../fonts/CormorantGaramond-Light-typewriter.ttf);
+  }
+  
+  @font-face {
+    font-family: "cormorantGaramondMedium";
+    src: url(../fonts/CormorantGaramond-Medium-nav.ttf);
+  }
+  
+  @font-face {
+    font-family: "cormorantGaramondSemibold";
+    src: url(../fonts/CormorantGaramond-SemiBold-h1h2.ttf);
+  }
+
+/* For all pages */
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* grid-template-columns: 100vw; */
+}
+
+main{
+    height: auto;
+    width: 100%;
+}
+
+/* Frontpage */
+
+.frontMain{
+  background-image: url(../img/frontpage-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#welcome{
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 4%;
+}
+
+#welText{
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+#welcome h1{
+  margin: 0;
+  padding: 0;
+  font-size: 8svh;
+  text-align: center;
+  color: white;
+  font-family: "cormorantGaramondSemibold";
+
+}
+
+
+#mainP{
+  margin: 0;
+  padding: 0;
+  max-width: 52ch;
+  font-size: 2.5svh;
+  line-height: 130%;
+  color: white;
+  font-family: "crimsonReg";
+
+}
+
+#mainP a{
+  text-decoration: none;
+  color: burlywood;
+  font-family: "crimsonReg";
+}
+
+@media (max-width:600px){
+  
+  #mainP{
+    font-size: 3vw;
+
+  }
+
+  #welcome h1{
+    font-size: 7vw;
+  }
+}
+
+/* Portfolio page */
+
+#local{
+  width: 100%;
+  height: auto;
+  background-color: rgb(102, 189, 189);
+}
+
+#local ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type:none;
+}
+
+#local ul li{
+  display: inline;
+  width: 25%;
+  border: 1px solid black;
+}
+
+#local ul li:hover{
+  background-color: rgb(76, 144, 144);
+}
+
+#local ul li a{
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: black;
+  text-align: center;
+  position: relative;
+  font-family: "cormorantGaramondMedium";
+  font-size: 3vw;
+  width: 100%;
+  transition: 0.5s;
+}
+
+#local ul li a:hover{
+  transform: scale(0.8);
+}
+
+
+#portContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 2svh;
+  width: 100%;
+  height: auto;
+}
+
+.portContent{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.portText{
+  padding: 1svh 0 1svh 5svh;
+}
+
+.iframeImg{
+  width: 100%;
+  height: 100%;
+}
+
+.portContent .themeText{
+  font-family: "crimsonReg";
+  font-size: 2svh;
+}
+
+.portContent h2{
+  margin: 0;
+  padding: 0;
+  font-family: "cormorantGaramondSemibold";
+  font-size: 4svh;
+}
+
+.portContent p{
+  margin: 0;
+  padding: 0;
+  max-width: 52ch;
+  font-size: 2.5svh;
+  line-height: 130%;
+  font-family: "crimsonReg";
+}
+
+.portContent a{
+  font-size: 2svh;
+  font-family: "crimsonReg";
+}
+
+.button{
+  position: sticky;
+  float: right;
+  bottom: 0;
+  width: fit-content;
+  margin: 0.4svh;
+  padding: 1svh;
+  background-color: rgb(102, 189, 189);
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.figure{
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid rgb(76, 144, 144);
+}
+
+
+@media (max-width:960px){
+
+    #local ul{
+      display: grid;
+    }
+
+    #local ul li{
+      width: 100%;
+    }
+    
+
+  .portContent{
+    grid-template-columns: 1fr;
+  }
+
+  .portText{
+    padding: 0;
+    padding-top: 2svh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portContent h2{
+    text-align: center;
+  }
+  .portContent p{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portContent .themeText{
+    text-align: center;
+  }
+}
+
+/* About */
+
+#aboutContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: auto;
+}
+
+#aboutContent{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4% 1% 4% 1%;
+  height: auto;
+}
+
+#me{
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.flip-card {
+  width: 90%;
+  height: 100%;
+  perspective: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border: 2px solid black;
+}
+
+.flip-card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  backface-visibility: hidden;
+}
+
+.front img{
+  width: 70%;
+  height: 100%;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.back h2{
+  margin: 0;
+  padding: 0;
+  padding-top: 2vw;
+  font-size: 4vw;
+  font-family: "crimsonReg";
+  text-align: center;
+}
+
+.back p{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4%;
+  max-width: 52ch;
+  font-size: 2vw;
+  line-height: 130%;
+  font-family: "crimsonReg";
+}
+
+#description{
+  border: 2px solid black;
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#description p{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4%;
+  max-width: 52ch;
+  font-size: 2vw;
+  line-height: 130%;
+  font-family: "crimsonReg";
+}
+
+#description h2{
+  margin: 0;
+  padding: 0;
+  padding-top: 2vw;
+  font-size: 4vw;
+  font-family: "crimsonReg";
+  text-align: center;
+}
+
+
+#cv{
+  /* position: relative; */
+  /* border: 3px solid green; */
+  margin-top: 5%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+#bnt{
+  font-family: "crimsonBold";
+  font-size: 2.5svh;
+  padding: 1%;
+  margin-bottom: 1%;
+  border-radius: 0 0 40% 0;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  font-family: "cormorantGaramondMedium";
+}
+
+#bnt:hover{
+  background-color: #414141;
+}
+
+
+#pdf-holder{
+  width: auto;
+  height: 1000px;
+  width: 90%;
+  margin-left: 5%;
+  padding-bottom: 5%;
+}
+
+#pdfText{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 52ch;
+  font-size: 2svh;
+  line-height: 130%;
+  font-family: "crimsonReg";
+}
+
+#pdfCurriculum{
+  width: 100%;
+  height: 100%;
+}
+
+.hide{
+  display: none;
+}
+
+
+
+@media (max-width:600px){
+
+  #aboutContent{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    padding: 4% 1% 4% 1%;
+    row-gap: 12%;
+    height: auto;
+  }
+
+  .back h2{
+    margin: 0;
+    padding: 0;
+    padding-top: 2vw;
+    font-size: 6vw;
+    font-family: "crimsonReg";
+    text-align: center;
+  }
+  
+  .back p{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4%;
+    max-width: 52ch;
+    font-size: 4vw;
+    line-height: 130%;
+    font-family: "crimsonReg";
+  }
+
+  #description{
+    border: 2px solid black;
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
+  #description p{
+    padding: 4%;
+    max-width: 52ch;
+    font-size: 3vw;
+    line-height: 130%;
+    font-family: "crimsonReg";
+    /* order: 1; */
+  }
+  
+  #description h2{
+    margin: 0;
+    padding: 0;
+    padding-top: 2vw;
+    font-size: 4vw;
+    font-family: "crimsonReg";
+    text-align: center;
+  }
+
+  #pdf-holder{
+    width: auto;
+    height: 615px;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 5%;
+  }
+
+
+}
